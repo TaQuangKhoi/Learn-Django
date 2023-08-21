@@ -1,80 +1,94 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - Mail App Design</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>CodePen - Mail App Design</title>
+    
+    <link rel="stylesheet" href="../static/style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class="main-container">
-  <div class="account-container">
-    <h2 class="account-name">John Doe</h2><span class="account-email">johndoe@code.com</span>
-    <button class="create-message-btn"> <i data-feather="mail"></i><span>New message</span></button>
-    <ul class="folder-list">
-      <li class="folder-item active"> <i data-feather="inbox"></i><span>Inbox</span><span class="message-count">2</span></li>
-      <li class="folder-item"><i data-feather="check-square"></i><span>Marked</span><span class="message-count">28</span></li>
-      <li class="folder-item"><i data-feather="edit-2"></i><span>Drafts</span></li>
-      <li class="folder-item"><i data-feather="trash"></i><span>Deleted</span><span class="message-count">17</span></li>
-    </ul>
-  </div>
-  <div class="messages-container">
-    <input class="search-input" type="text" placeholder="Search for messages..."/>
-    <div class="filter"><i data-feather="filter"></i><span class="filter-name">Lastest</span></div>
-    <ul class="message-list">
-      <li class="message-item not-readed">
-        <div class="header">
-          <h3 class="author">Jane Doe</h3><span class="date">13 Jan 2019</span>
-        </div>
-        <h2 class="title">Hey there, hope you'r fine.</h2>
-        <p class="text">Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.</p>
-      </li>
-      <li class="message-item">
-        <div class="header">
-          <h3 class="author">Jane Doe</h3><span class="date">13 Jan 2019</span>
-        </div>
-        <h2 class="title">Hey there, hope you'r fine.</h2>
-        <p class="text">Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.</p>
-      </li>
-      <li class="message-item">
-        <div class="header">
-          <h3 class="author">Jane Doe</h3><span class="date">13 Jan 2019</span>
-        </div>
-        <h2 class="title">Hey there, hope you'r fine.</h2>
-        <p class="text">Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.</p>
-      </li>
-      <li class="message-item not-readed">
-        <div class="header">
-          <h3 class="author">Jane Doe</h3><span class="date">13 Jan 2019</span>
-        </div>
-        <h2 class="title">Hey there, hope you'r fine.</h2>
-        <p class="text">Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.</p>
-      </li>
-    </ul>
-  </div>
-  <div class="content-container">
-    <div class="email-container">
-      <div class="header">
-        <h3 class="author">Jane Doe<span class="email">janedoe@code.com</span></h3><span class="date">13 Jan 2019</span>
-      </div>
-      <h2 class="title">Hey there, hope you'r fine.</h2>
-      <div class="text">
-        <p>Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.</p>
-        <p>Erat condimentum quis placerat rutrum diam nisl bibendum dolor purus tempus rutrum euismod ipsum urna felis massa et orci scelerisque diam portaest rutrum phasellus ipsum metus vivamus erat lacus suspendisse lacus bibendum elit metus magna orci massa phasellus morbi cursus urna pellentesque gravida nisi et bibendum ipsum hendrerit metus id gravida accumsan mi nunc dolor suspendisse ex phasellus urna tristique sollicitudin aliquam nisi.</p>
-      </div>
+    <div class="account-container">
+        <h2 class="account-name">John Doe</h2><span class="account-email">johndoe@code.com</span>
+        <button class="create-message-btn"><i data-feather="mail"></i><span>New message</span></button>
+        <ul class="folder-list">
+            <li class="folder-item active"><i data-feather="inbox"></i><span>Inbox</span><span
+                    class="message-count">2</span></li>
+            <li class="folder-item"><i data-feather="check-square"></i><span>Marked</span><span
+                    class="message-count">28</span></li>
+            <li class="folder-item"><i data-feather="edit-2"></i><span>Drafts</span></li>
+            <li class="folder-item"><i data-feather="trash"></i><span>Deleted</span><span
+                    class="message-count">17</span></li>
+        </ul>
     </div>
-    <ul class="actions">
-      <li class="action-item"><i data-feather="check-square"></i></li>
-      <li class="action-item"><i data-feather="corner-up-left"></i></li>
-      <li class="action-item"><i data-feather="printer"></i></li>
-      <li class="action-item"><i data-feather="trash"></i></li>
-    </ul>
-  </div>
-  <div class="clear"></div>
+    <div class="messages-container">
+        <input class="search-input" type="text" placeholder="Search for messages..."/>
+        <div class="filter"><i data-feather="filter"></i><span class="filter-name">Lastest</span></div>
+        <ul class="message-list">
+            <li class="message-item not-readed">
+                <div class="header">
+                    <h3 class="author">Jane Doe</h3><span class="date">13 Jan 2019</span>
+                </div>
+                <h2 class="title">Hey there, hope you'r fine.</h2>
+                <p class="text">Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus
+                    sed felis eros interdum sed maximus quis eu morbi enim mi.</p>
+            </li>
+            <li class="message-item">
+                <div class="header">
+                    <h3 class="author">Jane Doe</h3><span class="date">13 Jan 2019</span>
+                </div>
+                <h2 class="title">Hey there, hope you'r fine.</h2>
+                <p class="text">Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus
+                    sed felis eros interdum sed maximus quis eu morbi enim mi.</p>
+            </li>
+            <li class="message-item">
+                <div class="header">
+                    <h3 class="author">Jane Doe</h3><span class="date">13 Jan 2019</span>
+                </div>
+                <h2 class="title">Hey there, hope you'r fine.</h2>
+                <p class="text">Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus
+                    sed felis eros interdum sed maximus quis eu morbi enim mi.</p>
+            </li>
+            <li class="message-item not-readed">
+                <div class="header">
+                    <h3 class="author">Jane Doe</h3><span class="date">13 Jan 2019</span>
+                </div>
+                <h2 class="title">Hey there, hope you'r fine.</h2>
+                <p class="text">Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus
+                    sed felis eros interdum sed maximus quis eu morbi enim mi.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="content-container">
+        <div class="email-container">
+            <div class="header">
+                <h3 class="author">Jane Doe<span class="email">janedoe@code.com</span></h3><span class="date">13 Jan 2019</span>
+            </div>
+            <h2 class="title">Hey there, hope you'r fine.</h2>
+            <div class="text">
+                <p>Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis
+                    eros interdum sed maximus quis eu morbi enim mi.</p>
+                <p>Erat condimentum quis placerat rutrum diam nisl bibendum dolor purus tempus rutrum euismod ipsum urna
+                    felis massa et orci scelerisque diam portaest rutrum phasellus ipsum metus vivamus erat lacus
+                    suspendisse lacus bibendum elit metus magna orci massa phasellus morbi cursus urna pellentesque
+                    gravida nisi et bibendum ipsum hendrerit metus id gravida accumsan mi nunc dolor suspendisse ex
+                    phasellus urna tristique sollicitudin aliquam nisi.</p>
+            </div>
+        </div>
+        <ul class="actions">
+            <li class="action-item"><i data-feather="check-square"></i></li>
+            <li class="action-item"><i data-feather="corner-up-left"></i></li>
+            <li class="action-item"><i data-feather="printer"></i></li>
+            <li class="action-item"><i data-feather="trash"></i></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
 </div>
 <!-- partial -->
-  <script src='https://unpkg.com/feather-icons'></script><script  src="script.js"></script>
+<script src='https://unpkg.com/feather-icons'></script>
+<script src="script.js"></script>
 
 </body>
 </html>
