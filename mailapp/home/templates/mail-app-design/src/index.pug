@@ -1,0 +1,73 @@
+.main-container
+	.account-container
+		h2(class="account-name") John Doe
+		span(class="account-email") johndoe@code.com
+		button(class="create-message-btn") 
+			i(data-feather="mail")
+			span New message
+		ul(class="folder-list")
+			li(class="folder-item active") 
+				i(data-feather="inbox")
+				span Inbox
+				span(class="message-count") 2
+			li(class="folder-item")
+				i(data-feather="check-square")
+				span Marked
+				span(class="message-count") 28
+			li(class="folder-item")
+				i(data-feather="edit-2")
+				span Drafts
+			li(class="folder-item")
+				i(data-feather="trash")
+				span Deleted
+				span(class="message-count") 17
+	.messages-container
+		input(class="search-input" type="text" placeholder="Search for messages...")
+		.filter
+			i(data-feather="filter")
+			span(class="filter-name") Lastest
+		ul(class="message-list")
+			li(class="message-item not-readed")
+				.header
+					h3(class="author") Jane Doe
+					span(class="date") 13 Jan 2019
+				h2(class="title") Hey there, hope you'r fine.
+				p(class="text") Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.
+			li(class="message-item")
+				.header
+					h3(class="author") Jane Doe
+					span(class="date") 13 Jan 2019
+				h2(class="title") Hey there, hope you'r fine.
+				p(class="text") Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.
+			li(class="message-item")
+				.header
+					h3(class="author") Jane Doe
+					span(class="date") 13 Jan 2019
+				h2(class="title") Hey there, hope you'r fine.
+				p(class="text") Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.
+			li(class="message-item not-readed")
+				.header
+					h3(class="author") Jane Doe
+					span(class="date") 13 Jan 2019
+				h2(class="title") Hey there, hope you'r fine.
+				p(class="text") Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.
+	.content-container
+		.email-container
+			.header
+				h3(class="author") Jane Doe
+					span(class="email") janedoe@code.com
+				span(class="date") 13 Jan 2019
+			h2(class="title") Hey there, hope you'r fine.
+			div(class="text")
+				p Facilisis arcu maximus et molestie urna eget a urna felis scelerisque nisl maximus metus sed felis eros interdum sed maximus quis eu morbi enim mi.
+				p Erat condimentum quis placerat rutrum diam nisl bibendum dolor purus tempus rutrum euismod ipsum urna felis massa et orci scelerisque diam portaest rutrum phasellus ipsum metus vivamus erat lacus suspendisse lacus bibendum elit metus magna orci massa phasellus morbi cursus urna pellentesque gravida nisi et bibendum ipsum hendrerit metus id gravida accumsan mi nunc dolor suspendisse ex phasellus urna tristique sollicitudin aliquam nisi.
+		ul(class="actions")
+			li(class="action-item")
+				i(data-feather="check-square")
+			li(class="action-item")
+				i(data-feather="corner-up-left")
+			li(class="action-item")
+				i(data-feather="printer")
+			li(class="action-item")
+				i(data-feather="trash")
+	.clear
