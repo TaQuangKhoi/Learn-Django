@@ -1,5 +1,12 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.template import loader
+from app.models import Messages
 
 
 def app(request):
-    return render(request, 'home.html')
+    messages = Messages.objects.all().values()
+    template = loader.get_template('app.html')
+    context = {
+        'messages': messages,
+    }
+    return HttpResponse(template.render(context, request))

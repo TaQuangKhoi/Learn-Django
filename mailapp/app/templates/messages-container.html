@@ -1,6 +1,8 @@
 <div class="messages-container">
-    <input class="search-input" type="text" placeholder="Search for messages..."/>
-    <div class="filter"><i data-feather="filter"></i><span class="filter-name">Lastest</span></div>
+    <label>
+        <input class="search-input" type="text" placeholder="Search for messages..."/>
+    </label>
+    <div class="filter"><i data-feather="filter"></i><span class="filter-name">Latest</span></div>
     <ul class="message-list">
         <li class="message-item not-readed">
             <div class="header">
@@ -23,12 +25,21 @@
             <h2 class="title">Hey there, hope you'r fine.</h2>
             <p class="text">{% lorem %}</p>
         </li>
-        <li class="message-item not-readed">
-            <div class="header">
-                <h3 class="author">Jane Doe</h3><span class="date">13 Jan 2019</span>
-            </div>
-            <h2 class="title">Hey there, hope you're fine.</h2>
-            <p class="text">{% lorem %}</p>
-        </li>
+        {% for i in messages %}
+            {% if i.is_read == True %}
+                <li class="message-item">
+                    {% else %}
+                <li class="message-item not-readed">
+            {% endif %}
+                <div class="header">
+                    {% with i.author_set.all|first as author %}
+                        <h3 class="author">{{ author.name }}</h3>
+                    {% endwith %}
+                    <span class="date">{{ i.date }}</span>
+                </div>
+                <h2 class="title">{{ i.name }}</h2>
+                <p class="text">{{ i.message }}</p>
+            </li>
+        {% endfor %}
     </ul>
 </div>

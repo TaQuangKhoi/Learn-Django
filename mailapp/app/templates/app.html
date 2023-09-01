@@ -11,7 +11,7 @@
 <!-- partial:index.partial.html -->
 <div class="main-container">
     {% include 'account-container.html' %}
-    {% include 'messages-container.html' %}
+    {% include 'messages-container.html' with messages=messages %}
     {% include 'content-container.html' %}
     <div class="clear"></div>
 </div>
