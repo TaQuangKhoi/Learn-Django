@@ -7,21 +7,21 @@
     </button>
 
     <ul class="folder-list">
-        <li class="folder-item active">
+        <li class="folder-item active" id="inbox_folder_item" onclick="clickFolderItem(this.id)">
             <i data-feather="inbox"></i>
             <span>Inbox</span>
             <span class="message-count">2</span>
         </li>
-        <li class="folder-item">
+        <li class="folder-item" id="marked_folder_item" onclick="clickFolderItem(this.id)">
             <i data-feather="check-square"></i>
             <span>Marked</span>
             <span class="message-count">28</span>
         </li>
-        <li class="folder-item">
+        <li class="folder-item" id="drafts_folder_item" onclick="clickFolderItem(this.id)">
             <i data-feather="edit-2"></i>
             <span>Drafts</span>
         </li>
-        <li class="folder-item">
+        <li class="folder-item" id="deleted_folder_item" onclick="clickFolderItem(this.id)">
             <i data-feather="trash"></i>
             <span>Deleted</span>
             <span class="message-count">17</span>
