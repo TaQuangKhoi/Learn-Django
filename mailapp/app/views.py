@@ -4,7 +4,7 @@ from app.models import Messages
 
 
 def app(request):
-    messages = Messages.objects.all().values()
+    messages = Messages.objects.all()
     template = loader.get_template('app.html')
     context = {
         'messages': messages,

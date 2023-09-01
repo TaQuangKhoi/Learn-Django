@@ -19,3 +19,6 @@ class Messages(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_author_name(self):
+        return self.author.name
