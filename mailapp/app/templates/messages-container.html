@@ -2,7 +2,10 @@
     <label>
         <input class="search-input" type="text" placeholder="Search for messages..."/>
     </label>
-    <div class="filter"><i data-feather="filter"></i><span class="filter-name">Latest</span></div>
+    <div class="filter">
+        <i data-feather="filter"></i>
+        <span class="filter-name">Latest</span>
+    </div>
     <ul class="message-list">
         {% for i in messages %}
             {% if i.is_read == True %}
