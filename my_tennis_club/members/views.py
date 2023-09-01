@@ -4,7 +4,11 @@ from django.template import loader
 from members.models import Member
 
 
-# Create your views here.
+def main(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())
+
+
 def members(request):
     my_members = Member.objects.all().values()
     template = loader.get_template('all_members.html')
