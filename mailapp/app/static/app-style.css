@@ -212,6 +212,12 @@ button .feather {
   float: left;
   width: 70%;
   height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.email-container {
+  flex: 1;
 }
 
 .email-container .header {

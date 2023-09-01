@@ -15,6 +15,7 @@ class Messages(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     message = models.TextField(null=True)
     is_read = models.BooleanField(default=False)
+    is_marked = models.BooleanField(default=False)
     date = models.DateTimeField(null=True)
 
     def __str__(self):

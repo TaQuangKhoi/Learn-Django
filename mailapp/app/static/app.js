@@ -1,4 +1,9 @@
-console.log('app.js')
+let initFeather = setInterval(function () {
+    if (feather !== undefined) {
+        feather.replace()
+        clearInterval(initFeather)
+    }
+}, 200)
 
 function clickFolderItem(id) {
     disableActive()
