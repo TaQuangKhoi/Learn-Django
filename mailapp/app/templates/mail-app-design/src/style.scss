@@ -205,7 +205,7 @@ button .feather {
 		overflow: hidden;
 		margin: 0;
 	}
-	&.not-readed {
+	&.not-read {
 		background-color: rgba(0, 0, 0, 0.08);
 	}
 	&:hover {
@@ -213,7 +213,7 @@ button .feather {
 	}
 }
 
-.message-item.not-readed::after {
+.message-item.not-read::after {
 	content: "";
 	position: absolute;
 	top: 0;

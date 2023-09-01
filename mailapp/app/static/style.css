@@ -199,14 +199,14 @@ button .feather {
   overflow: hidden;
   margin: 0;
 }
-.message-item.not-readed {
+.message-item.not-read {
   background-color: rgba(0, 0, 0, 0.08);
 }
 .message-item:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-.message-item.not-readed::after {
+.message-item.not-read::after {
   content: "";
   position: absolute;
   top: 0;
