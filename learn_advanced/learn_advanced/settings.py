@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'first_app',
     'polls',
-    'task_app'
+    'task_app',
+
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +123,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'task_app.User'
+
+MEDIA_ROOT = '%s/task_app/static/' % BASE_DIR
+
+CKEDITOR_UPLOAD_PATH = 'uploads/lessons/contents/'

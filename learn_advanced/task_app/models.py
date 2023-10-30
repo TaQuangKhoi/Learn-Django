@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
-
-# Create your models here.
+from ckeditor.fields import RichTextField
 
 
 class User(AbstractUser):
@@ -26,7 +24,7 @@ class Course(models.Model):
 
 class Lesson(models.Model):
     subject = models.CharField(max_length=200, null=False)
-    content = models.TextField()
+    content = RichTextField()
     image = models.ImageField(upload_to='uploads/lessons/%Y/%m', default=None)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
