@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
+
 # Create your models here.
 
 
@@ -31,3 +32,8 @@ class Lesson(models.Model):
     updated_date = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=True)
     course = models.ForeignKey(Course, related_name='lessons', on_delete=models.CASCADE)
+    tags = models.ManyToManyField('Tag', related_name='lessons', null=True)
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50, unique=True)
