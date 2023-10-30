@@ -24,5 +24,5 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
 
     path('', include('task_app.urls')),
-    re_path(r'ckeditor', include('ckeditor_uploader.urls'))
+    re_path(r'ckeditor', include('ckeditor_uploader.urls')),
 ]
