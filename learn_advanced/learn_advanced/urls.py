@@ -25,4 +25,6 @@ urlpatterns = [
 
     path('', include('task_app.urls')),
     re_path(r'ckeditor', include('ckeditor_uploader.urls')),
+
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
