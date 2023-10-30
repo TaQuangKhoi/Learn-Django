@@ -129,3 +129,8 @@ AUTH_USER_MODEL = 'task_app.User'
 MEDIA_ROOT = '%s/task_app/static/' % BASE_DIR
 
 CKEDITOR_UPLOAD_PATH = 'uploads/lessons/contents/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': '2',
+}
