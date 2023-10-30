@@ -30,6 +30,9 @@ router.register('category', views.CategoryViewSet)
 # /categorys/{category_id} --> detail --> PUT --> cap nhat 1 Category
 # /categorys/{category_id} --> detail --> DELETE --> xoa 1 Category
 
+router.register('user', views.UserViewSet)
+
+
 urlpatterns = [
     path("", views.index, name="index"),
     path('welcome/', views.welcome, name='welcome'),

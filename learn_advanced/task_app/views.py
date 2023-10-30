@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 
-from rest_framework import viewsets, permissions
-from .models import Category
-from .serializers import CategorySerializer
+from rest_framework import viewsets, permissions, generics
+from rest_framework.parsers import MultiPartParser
+
+from .models import Category, User
+from .serializers import CategorySerializer, UserSerializer
 
 
 def index(request):
@@ -38,6 +40,20 @@ class CategoryViewSet(viewsets.ModelViewSet):
 
     # permission_classes = [permissions.IsAuthenticated]
     def get_permissions(self):
-        if self.action == 'list':
-            return [permissions.AllowAny()]
+        # if self.action in permissions:
+        #     return [permissions.AllowAny()]
         return [permissions.IsAuthenticated()]
+
+
+class UserViewSet(viewsets.ViewSet,
+                  generics.ListAPIView,
+                  generics.CreateAPIView,
+                  generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    parser_classes = [MultiPartParser, ]
+
+    def get_permissions(self):
+        if self.action == 'retrieve':
+            return [permissions.IsAuthenticated()]
+        return [permissions.AllowAny()]

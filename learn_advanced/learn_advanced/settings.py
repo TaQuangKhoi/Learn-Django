@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'first_app',
     'polls',
-    'task_app',
+
+    'task_app.apps.TaskAppConfig',
 
     'ckeditor',
     'ckeditor_uploader',
@@ -138,5 +139,4 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
     ),
-
 }
