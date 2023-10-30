@@ -21,4 +21,7 @@ from task_app import views
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path('welcome/', views.welcome, name='welcome'),
+    path('test/', views.TestView.as_view(), name='test')
+
 ]

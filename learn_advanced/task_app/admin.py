@@ -2,6 +2,9 @@ from django.contrib import admin
 from .models import Category, Course, Lesson, Tag
 from django.utils.html import format_html
 
+from django import forms
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['id', 'name']
@@ -20,7 +23,17 @@ class CourseAdmin(admin.ModelAdmin):
         )
 
 
+class LessonForm(forms.ModelForm):
+    content = forms.CharField(widget=CKEditorUploadingWidget)
+
+    class Meta:
+        model = Lesson
+        fields = '__all__'
+
+
 class LessonAdmin(admin.ModelAdmin):
+    form = LessonForm
+
     list_display = ['id', 'subject', 'content', 'image', 'active', 'created_date', 'updated_date', 'course']
     search_fields = ['subject', 'created_date', 'course__subject']
 
